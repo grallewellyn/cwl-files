@@ -18,7 +18,7 @@ $graph:
     test:
       doc: test
       label: test
-      type: integer
+      type: number
   outputs:
     out:
       type: Directory
@@ -57,7 +57,7 @@ $graph:
         position: 2
         prefix: --stac_catalog_folder
     test: 
-      type: integer 
+      type: number 
       inputBinding:
         position: 3
         prefix: --test
