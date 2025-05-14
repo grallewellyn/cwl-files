@@ -14,6 +14,10 @@ $graph:
     stac_catalog_folder:
       doc: STAC catalog folder
       label: catalog folder
+      type: Directory
+    test:
+      doc: test
+      label: test
       type: integer
   outputs:
     out:
@@ -25,6 +29,7 @@ $graph:
       in:
         bbox: bbox
         stac_catalog_folder: stac_catalog_folder
+        test: test
       out:
       - outputs_result
 - class: CommandLineTool
@@ -47,10 +52,16 @@ $graph:
         prefix: --bbox
       default: -118.06817 34.22169 -118.05801 34.22822
     stac_catalog_folder:
-      type: integer
+      type: Directory
       inputBinding:
         position: 2
         prefix: --stac_catalog_folder
+    test: 
+      type: integer 
+      inputBinding:
+        position: 3
+        prefix: --test
+      default: 1
   outputs:
     outputs_result:
       outputBinding:
