@@ -6,6 +6,20 @@ $graph:
     from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation
     Model (DEM) obtained from Copernicus.
   id: sardem-sarsen
+  inputs:
+    bbox:
+      doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
+      label: bounding box
+      type: string
+      default: "-118.06817 34.22169 -118.05801 34.22822"
+    stac_catalog_folder:
+      doc: STAC catalog folder
+      label: catalog folder
+      type: Directory
+    stac_asset_name:
+      doc: STAC asset name
+      label: asset name
+      type: string?
   outputs:
     out:
       type: Directory
@@ -31,6 +45,22 @@ $graph:
       coresMin: 1
       outdirMax: 20
   baseCommand: /app/sardem-sarsen/sardem-sarsen.sh
+  inputs:
+    bbox:
+      type: string
+      inputBinding:
+        position: 1
+        prefix: --bbox
+    stac_catalog_folder:
+      type: Directory
+      inputBinding:
+        position: 2
+        prefix: --stac_catalog_folder
+    stac_asset_name:
+      type: string?
+      inputBinding:
+        position: 3
+        prefix: --stac_asset_name
   outputs:
     outputs_result:
       outputBinding:
