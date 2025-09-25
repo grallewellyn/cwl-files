@@ -1,7 +1,7 @@
 cwlVersion: v1.2
 $graph:
 - class: Workflow
-  label: sardem-sarsen 
+  label: sardem-sarsen
   doc: altered description
   id: sardem-sarsen1
   inputs:
