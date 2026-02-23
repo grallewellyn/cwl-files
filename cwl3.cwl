@@ -69,7 +69,7 @@ s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
 s:version: 3
 s:releaseNotes: None
-s:keywords: ogc, sar
+s:keywords: ogc, sar1
 $namespaces:
   s: https://schema.org/
 $schemas:
