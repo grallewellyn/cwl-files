@@ -59,7 +59,7 @@ s:commitHash: c4ab8153eca3256aaf2311856dadc1851ac4ef93
 s:dateCreated: 2025-06-03
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
-s:version: 
+s:version:
 s:releaseNotes: None
 s:keywords: ogc, sar
 $namespaces:
