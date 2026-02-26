@@ -2,7 +2,7 @@ cwlVersion: v1.2
 $graph:
 - class: Workflow
   label: sardem-sarsen
-  doc: test change description
+  doc: test change description2
   id: sardem-sarsen1
   inputs:
     bbox:
