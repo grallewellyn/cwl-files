@@ -2,9 +2,7 @@ cwlVersion: v1.2
 $graph:
 - class: Workflow
   label: sardem-sarsen
-  doc: This application is designed to process Synthetic Aperture Radar (SAR) data
-    from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation
-    Model (DEM) obtained from Copernicus. 1:46
+  doc: test change description
   id: sardem-sarsen1
   inputs:
     bbox:
