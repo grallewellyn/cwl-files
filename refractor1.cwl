@@ -101,7 +101,7 @@ $graph:
 
   steps:
     step_1:
-      run: "#clt"
+      run: "#main"
       in:
         retrieval_config: retrieval_config
         strategy_table: strategy_table
@@ -114,7 +114,7 @@ $graph:
 # ============================================================================
 
 - class: CommandLineTool
-  id: clt
+  id: main
   label: Refractor Retrieve Tool
 
   requirements:
