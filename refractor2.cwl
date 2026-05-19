@@ -129,8 +129,6 @@ $graph:
         PATH: /root/.pixi/bin:/home/muses/muses-env/.pixi/envs/default/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin
         PYTHONUNBUFFERED: "1"
 
-    InlineJavascriptRequirement: {}
-
   inputs:
     retrieval_config:
       type: string?
@@ -146,7 +144,7 @@ $graph:
       type: Directory
       inputBinding:
         position: 3
-        valueFrom: $(self.path + '/catalog.json')
+        valueFrom: $(self.path)/catalog.json
 
     output_dir:
       type: string?
@@ -159,7 +157,7 @@ $graph:
         type: array
         items: [File, Directory]
       outputBinding:
-        glob: $(inputs.output_dir + '/*')
+        glob: $(inputs.output_dir)/*
 
     stdout_file:
       type: File
