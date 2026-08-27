@@ -1,9 +1,9 @@
 cwlVersion: v1.2
 $graph:
 - class: Workflow
-  label: dps_tutorial_bounding_box
+  label: dps_tutorial_bounding_box_other_inputs
   doc: testing bbox
-  id: dps_tutorial_bounding_box
+  id: dps_tutorial_bounding_box_other_inputs
   inputs:
     bounding box:
       doc: bbox
@@ -29,7 +29,7 @@ $graph:
   id: main
   requirements:
     DockerRequirement:
-      dockerPull: mas.uat.maap-project.org/root/ogc-application-packages/grace.llewellyn/dps_tutorial_bounding_box:mmgis-mapable
+      dockerPull: mas.uat.maap-project.org/root/maap-workspaces/custom_images/maap_base:v6.0.0
     NetworkAccess:
       networkAccess: true
     ResourceRequirement:
