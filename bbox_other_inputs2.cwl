@@ -6,15 +6,15 @@ $graph:
   id: dps_tutorial_bounding_box_other_inputs
   inputs:
     bounding box:
-      doc: bbox
+      doc: Area of interest
       label: bbox
       type: string
     atmospheric correction:
-      doc: atmospheric_correction
+      doc: Perform atmospheric correction
       label: atmospheric_correction
       type: boolean
     date:
-      doc: date
+      doc: Date to run analysis
       label: date
       type: string
       default: 2026-08-28
