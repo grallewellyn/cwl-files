@@ -1,23 +1,30 @@
 cwlVersion: v1.2
 $graph:
 - class: Workflow
-  label: dps_tutorial_2_bounding_box
+  label: dps_tutorial_lat_lon_combo
   doc: testing bbox
-  id: dps_tutorial_2_bounding_box
+  id: dps_tutorial_lat_lon_combo
   inputs:
-    biomass bounding box:
-      doc: Area of interest
-      label: biomass bbox
+    latlon:
+      doc: lat lon
+      label: lat lon
       type: string
-    output bounding box:
-      doc: Where output should be generated for
-      label: output bounding box
+    lnglat:
+      doc: lnglat
+      label: lnglat
       type: string
-    date:
-      doc: Date to run analysis
-      label: date
+    longitude latitiude:
+      doc: longitude latitiude
+      label: longitude latitiude
       type: string
-      default: 2026-08-28
+    firstlongitudelatitude:
+      doc: firstlongitudelatitude
+      label: firstlongitudelatitude:
+      type: string
+    second lng latitude:
+      doc: second lng latitude
+      label: second lng latitude
+      type: string
   outputs:
     out:
       type: Directory
@@ -26,9 +33,11 @@ $graph:
     process:
       run: '#main'
       in:
-        biomass bounding box: biomass bounding box
-        output bounding box: output bounding box
-        date: date
+        latlon: latlon
+        lnglat: lnglat
+        longitude latitiude: longitude latitiude
+        firstlongitudelatitude: firstlongitudelatitude
+        second lng latitude: second lng latitude
       out:
       - outputs_result
 - class: CommandLineTool
@@ -44,22 +53,31 @@ $graph:
       outdirMax: 20
   baseCommand: /app/dps_tutorial/mapable_algorithm_bbox/run_bbox.sh
   inputs:
-    biomass bounding box:
+    latlon:
       type: string
       inputBinding:
         position: 1
-        prefix: --biomass bounding box
-    output bounding box:
-      type: boolean
+        prefix: --latlon
+    lnglat:
+      type: string
       inputBinding:
         position: 2
-        prefix: --output bounding box
-    date:
+        prefix: --lnglat
+    longitude latitiude:
       type: string
       inputBinding:
         position: 3
-        prefix: --date
-      default: 2026-08-28
+        prefix: --longitude latitiude
+    firstlongitudelatitude:
+      type: string
+      inputBinding:
+        position: 4
+        prefix: --firstlongitudelatitude
+    second lng latitude:
+      type: string
+      inputBinding:
+        position: 5
+        prefix: --second lng latitude
   outputs:
     outputs_result:
       outputBinding:
