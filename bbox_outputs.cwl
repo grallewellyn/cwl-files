@@ -1,5 +1,4 @@
- cwlVersion: v1.2
-
+cwlVersion: v1.2
 $graph:
   - class: Workflow
     label: dps_tutorial_outputs
