@@ -51,7 +51,7 @@ $graph:
 
     requirements:
       DockerRequirement:
-        dockerPull: gal16/dps_tutorial_outputs:mmgis-mapable
+        dockerPull: mas.uat.maap-project.org/root/ogc-application-packages/grace.llewellyn/dps_tutorial_outputs:mmgis-mapable
 
       NetworkAccess:
         networkAccess: true
